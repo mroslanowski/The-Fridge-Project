@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -56,7 +56,8 @@
 }
 
 .wrapper {
-    width: 450px;
+    width: 100%; /* Responsywność dla różnych rozmiarów ekranu */
+    max-width: 450px; /* Maksymalna szerokość kontenera */
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(7px);
@@ -136,4 +137,15 @@
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+    }
+    
+    .wrapper {
+        margin-top: 40px;
+    }
 }

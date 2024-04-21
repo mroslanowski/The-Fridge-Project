@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 .banner {
@@ -41,7 +41,8 @@
 }
 
 .wrapper {
-    width: 450px;
+    width: 100%; /* Responsywność dla różnych rozmiarów ekranu */
+    max-width: 450px; /* Maksymalna szerokość kontenera */
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(7px);
@@ -52,7 +53,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 120px auto; /* Wyśrodkowanie w poziomie */
+    margin: 120px auto; /* Wyśrodkowanie w pionie */
 }
 
 .wrapper h1 {
@@ -125,4 +126,15 @@
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+    }
+    
+    .wrapper {
+        margin: 80px auto;
+    }
 }
